@@ -32,7 +32,7 @@
 
     <br><br>
 
-    <button type="submit">
+    <button type="submit" class="w-full bg-blue-600 text-white rounded-lg p-3 mt-4">
         Login
     </button>
 

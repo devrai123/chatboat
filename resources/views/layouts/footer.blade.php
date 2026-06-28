@@ -5,5 +5,5 @@
     text-align:center;
     padding:15px;
 ">
-    © {{ date('Y') }} Laravel Admin Panel
+    © {{ date('Y') }} Devendra Kumar Rai Admin Panel
 </footer>

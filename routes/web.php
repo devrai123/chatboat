@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChatbotController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\RozarPaymentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +15,9 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('auth.login');
+});
 Route::get('/chatbots',[ChatbotController::class,'index']);
 Route::post('chatbot',[ChatbotController::class,'sendMessage']);
 
@@ -29,6 +30,9 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::middleware('auth')->group(function () {
 
     Route::get('/dashboard', [AuthController::class, 'dashboard']);
+    Route::get('/rozarpayments', [RozarPaymentController::class, 'index'])->name('rozarpayments');
+Route::post('/rozarpayments/store', [RozarPaymentController::class, 'store'])
+    ->name('rozarpayments.store');
 
     Route::post('/logout', [AuthController::class, 'logout']);
 });

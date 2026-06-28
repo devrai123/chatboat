@@ -1,6 +1,6 @@
 <header style="background:#343a40;color:white;padding:15px;display:flex;justify-content:space-between;">
 
-    <h2>Laravel Admin Panel</h2>
+    <h2>Devendra Kumar Rai Admin Panel</h2>
 
     <div>
 
